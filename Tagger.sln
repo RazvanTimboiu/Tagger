@@ -8,8 +8,14 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Domain", "Domain\Domain.csproj", "{7B8A96BA-7844-4FB5-814C-187F921DBC82}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Application", "Application\Application.csproj", "{CD3041F7-A99C-4E42-9E07-F4B2A5932276}"
+	ProjectSection(ProjectDependencies) = postProject
+		{282F986F-580F-41F7-A619-BEC3D81BADCF} = {282F986F-580F-41F7-A619-BEC3D81BADCF}
+	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Persistence", "Infrastructure\Persistence.csproj", "{282F986F-580F-41F7-A619-BEC3D81BADCF}"
+	ProjectSection(ProjectDependencies) = postProject
+		{7B8A96BA-7844-4FB5-814C-187F921DBC82} = {7B8A96BA-7844-4FB5-814C-187F921DBC82}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
