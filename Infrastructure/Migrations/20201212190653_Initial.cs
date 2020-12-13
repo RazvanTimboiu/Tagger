@@ -23,7 +23,7 @@ namespace Persistence.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "Datasets",
+                name: "DataSets",
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
@@ -56,7 +56,7 @@ namespace Persistence.Migrations
                     table.ForeignKey(
                         name: "FK_Classes_Datasets_DatasetId",
                         column: x => x.DatasetId,
-                        principalTable: "Datasets",
+                        principalTable: "DataSets",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                 });
@@ -76,7 +76,7 @@ namespace Persistence.Migrations
                     table.ForeignKey(
                         name: "FK_Samples_Datasets_DatasetId",
                         column: x => x.DatasetId,
-                        principalTable: "Datasets",
+                        principalTable: "DataSets",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                 });
@@ -116,7 +116,7 @@ namespace Persistence.Migrations
 
             migrationBuilder.CreateIndex(
                 name: "IX_Datasets_CreatorId",
-                table: "Datasets",
+                table: "DataSets",
                 column: "CreatorId");
 
             migrationBuilder.CreateIndex(
@@ -137,7 +137,7 @@ namespace Persistence.Migrations
                 name: "Samples");
 
             migrationBuilder.DropTable(
-                name: "Datasets");
+                name: "DataSets");
 
             migrationBuilder.DropTable(
                 name: "Accounts");

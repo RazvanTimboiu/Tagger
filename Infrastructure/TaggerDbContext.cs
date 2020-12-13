@@ -3,15 +3,16 @@ using System.Collections.Generic;
 using System.Text;
 using Microsoft.EntityFrameworkCore;
 using Domain.Entities;
+using Persistence.Interfaces;
 
-namespace Infrastructure.Persistence
+namespace Persistence
 {
-    public class TaggerDbContext : DbContext
+    public class TaggerDbContext : DbContext, ITaggerDbContext
     {
         public DbSet<Account> Accounts { get; set; }
         public DbSet<Class> Classes { get; set; }
         public DbSet<Data> Data { get; set; }
-        public DbSet<Dataset> Datasets { get; set; }
+        public DbSet<Dataset> DataSets { get; set; }
         public DbSet<Sample> Samples { get; set; }
 
 
