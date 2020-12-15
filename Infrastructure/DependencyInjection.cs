@@ -20,6 +20,7 @@ namespace Persistence
 
             services.AddScoped<ITaggerDbContext>(provider => provider.GetService<TaggerDbContext>());
             services.AddTransient<IAccountRepository, AccountRepository>();
+            services.AddTransient<IDatasetRepository, DatasetRepository>();
 
             return services;
         }
