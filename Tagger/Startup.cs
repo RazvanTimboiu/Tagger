@@ -29,6 +29,10 @@ namespace Tagger
 
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddCors(c =>
+            {
+                c.AddPolicy("AllowOrigin", options => options.WithOrigins("http://localhost:8100").AllowAnyHeader().AllowCredentials());
+            });
             services.AddControllers();
             services.Configure<TokenConfig>(Configuration.GetSection("Taken"));
             services.AddPersistence(Configuration);
@@ -70,6 +74,7 @@ namespace Tagger
 
             app.UseHttpsRedirection();
             app.UseRouting();
+            app.UseCors(options => options.WithOrigins("http://localhost:8100"));
             app.UseAuthentication();
             app.UseAuthorization();
             app.UseOpenApi();

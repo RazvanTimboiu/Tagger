@@ -1,12 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Application.Account.Commands;
+﻿using Application.Account.Commands;
 using Application.Common.Exceptions;
 using Application.DTO;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore.SqlServer.Query.Internal;
+using System.Threading.Tasks;
 
 namespace Tagger.Controllers
 {
